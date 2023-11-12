@@ -4,6 +4,9 @@ index_list=[1,2,3,4,5,6,7,8,9]
 choice =0
 player=1
 c='c'
+
+#Display the tic tac tor board with the index numbers in each box
+
 def display_board():
     print("\t\t    |    |     ")
     print("\t\t  {} | {}  | {}  ".format(index_list[6],index_list[7],index_list[8]))
@@ -16,7 +19,7 @@ def display_board():
     print("\t\t    |    |     ")
 	
 
-
+#Take inpur the user choice and display it on the board
 def user_choice():
 
     choice=False
@@ -39,7 +42,7 @@ def user_choice():
     return int(choice)	
 
 
-
+#change the index value to the user input
   
 def change_index(choice):
         global player
@@ -51,6 +54,7 @@ def change_index(choice):
         os.system('clear')
         display_board()
         
+# Check for different conditions that may arise during the game
 
 def condition():
     global c
@@ -72,6 +76,8 @@ def condition():
         return index_list[2]
     else:
         return c
+
+#Call all the functions in proper order
 
 def play_game():
     play_choice='y'
