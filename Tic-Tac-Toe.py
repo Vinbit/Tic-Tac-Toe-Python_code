@@ -29,13 +29,13 @@ def user_choice():
         if player%2==0:
             choice=input("O's turn:")
             if choice not in ['1','2','3','4','5','6','7','8','9']:
-                os.system('clear')
+                os.system('cls')
                 print("Invalid choice\n")
                 display_board()
         else:
             choice=input("X's turn:")
             if choice not in ['1','2','3','4','5','6','7','8','9']:
-                os.system('clear')
+                os.system('cls')
                 print("Invalid choice\n")
                 display_board()
 		    
@@ -51,7 +51,7 @@ def change_index(choice):
         else:
             index_list[choice-1]='X'
         player=player+1
-        os.system('clear')
+        os.system('cls')
         display_board()
         
 # Check for different conditions that may arise during the game
@@ -87,7 +87,7 @@ def play_game():
     global choice
     global index_list
     while play_choice=='y':
-        os.system('clear')
+        os.system('cls')
         index_list=[1,2,3,4,5,6,7,8,9]
         choice =0
         player=1
